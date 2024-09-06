@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/Teste-vocacional.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Vocação Polar - Descongele seu futuro!</title> 
+</head>
+<body>
+    <header>
+    <div class="img">
+        <img src="img/logo.png"  alt="Logo Urso com a lapela" class="imgLogo">
+    </div>
+
+    <nav id="nav-bar">
+        <ul>
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="descricao.html" data-target="descricao.html" class="nav-link">DESCRIÇÃO</a></li>
+            <li><a href="cursos.html" data-target="cursos.html" class="nav-link">CURSOS</a></li>
+        </ul>
+    </nav>
+
+    <div class="btn1">
+    <img src="img/acess.png" alt="Botão de Acessibilidade" class="imgAcess">  
+  </div>
+
+</header>
+
+    <main class="carrossel"> 
+        <div class="image-container">
+            <img id="leftImage" class="left-image" src="img/gelo.png" alt="Iceberg">
+
+            <div class="center-container" id="centerContainer">
+                <h1>Vocação Polar</h1>
+            <h2>Descongele seu futuro!</h2> 
+                <p>Faça esse teste vocacional para conhecer suas habilidades e descobrir seu curso ideal.</p>
+                <button class="btnIniciar"> INICIAR TESTE </button>
+            </div>
+            <img id="rightImage" class="right-image" src="img/urso.png" alt="Iceberg com o urso mascote">
+        </div>
+        <div class="cursor-ball" id="cursorBall"></div>
+    </main>
+
+    <!-- Modais de Alerta -->
+    <!-- Primeira Modal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content"> 
+            <form action="cadastro.php" method="post">
+            
+                 
+                    <div class="login-container">
+                        <div class="login-box">
+                            
+                            <h2>Cadastro</h2>
+                            <form id="loginForm">
+                                <div id="errorMessage" style="color: red; display: none; margin-bottom: 10px;"></div>
+                                <div class="textbox">
+                                    <input type="text" id="username" name="usuario" placeholder="Usuário" required>
+                                </div>
+                                <div class="textbox">
+                                    <input type="password" id="password" name="senha" placeholder="Senha" required>
+                                </div>
+                                <button onclick="handleFormSubmit(event)" class="btn2">Cadastrar</button>
+
+
+                            </form>
+                        </div>
+                    </div>
+                    </form>
+        
+        </div>
+    </div>
+
+    <!-- Segunda Modal -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <p>(segundo conteúdo do tutorial)</p>
+            <button onclick="showNextModal('modal3')">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Terceira Modal -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <p>Você está pronto para começar o teste. Boa sorte!</p>
+            <button onclick="closeModal('modal3')">Iniciar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
